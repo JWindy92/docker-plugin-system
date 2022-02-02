@@ -1,0 +1,4 @@
+plugins:
+  weather:
+    name: weather2
+    image: weather2-img

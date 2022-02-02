@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api:
+    image: api-test-img
+    build: ./main
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+    networks:
+      - smart-home-network
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  smart-home-network:
+    name: smart-home-network
+    driver: bridge

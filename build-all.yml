@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api:
+    image: api-test-img
+    build: ./main
+  weather1:
+    image: weather1-img
+    build: ./weather1
+  weather2:
+    image: weather2-img
+    build: ./weather2
